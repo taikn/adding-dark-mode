@@ -1,0 +1,7 @@
+.controlsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 0.75rem;
+}
