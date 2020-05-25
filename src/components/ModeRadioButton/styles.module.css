@@ -34,7 +34,7 @@
   display: flex;
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
 
-  /* Needed for ios safari, otherwise some weird jumps in the end of animation */
+  /* needed for ios safari, otherwise some weird jumps in the end of animation */
   transform: translate3d(0, 0, 0);
 }
 

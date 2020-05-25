@@ -6,33 +6,38 @@ import AutoIcon from '../AutoIcon'
 import ModeRadioButton from '../ModeRadioButton'
 
 export default () => {
-  const [mode, setMode] = useState('auto')
+  const [switchMode, setSwitchMode] = useState('auto')
+
+  const handleSwitch = (switchMode) => {
+    setSwitchMode(switchMode)
+  }
+
   return (
     <div className={styles.controlsContainer}>
       <ModeRadioButton
-        id='dayMode'
-        name='colorMode'
+        id='daySwitchMode'
+        name='switchMode'
         value='day'
-        onChange={() => setMode('day')}
-        checked={mode === 'day'}
+        onChange={() => handleSwitch('day')}
+        checked={switchMode === 'day'}
       >
         <DayIcon size='28px' />
       </ModeRadioButton>
       <ModeRadioButton
-        id='autoMode'
-        name='colorMode'
+        id='autoSwitchMode'
+        name='switchMode'
         value='auto'
-        onChange={() => setMode('auto')}
-        checked={mode === 'auto'}
+        onChange={() => handleSwitch('auto')}
+        checked={switchMode === 'auto'}
       >
         <AutoIcon size='28px' />
       </ModeRadioButton>
       <ModeRadioButton
-        id='nightMode'
-        name='colorMode'
+        id='nightSwitchMode'
+        name='switchMode'
         value='night'
-        onChange={() => setMode('night')}
-        checked={mode === 'night'}
+        onChange={() => handleSwitch('night')}
+        checked={switchMode === 'night'}
       >
         <NightIcon size='28px' />
       </ModeRadioButton>
